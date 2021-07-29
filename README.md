@@ -9,7 +9,7 @@ The models are assessed based on their AUC score, and predictions made are based
 Input data was too large to upload, but can be viewed/downloaded here: https://drive.google.com/drive/folders/1Vovj_PTrj3HF5dXWZ1peZ-eW9vy1W3bG?usp=sharing
 
 ## Conclusion
-Random Forest performs the best out of all the statistical learning methods with an AUC of 0.90.
+Random Forest performed the best out of all the statistical learning methods with an AUC of 0.90.
 
 ![image](https://user-images.githubusercontent.com/62014067/127531245-ee882c3d-0257-434c-8bb7-441562433e68.png)
 
