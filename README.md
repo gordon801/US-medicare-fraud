@@ -8,6 +8,9 @@ The models are assessed based on their AUC score, and predictions made are based
 ## Input Data
 Input data was too large to upload, but can be viewed/downloaded here: https://drive.google.com/drive/folders/1Vovj_PTrj3HF5dXWZ1peZ-eW9vy1W3bG?usp=sharing
 
+## Analysis & Modelling
+Detailed analysis and modelling with documentation in US-medicare-fraud-detection.py.
+
 ## Conclusion
 Random Forest performed the best out of all the statistical learning methods with an AUC of 0.90.
 
