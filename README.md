@@ -1,8 +1,8 @@
 # US Medicare Fraud Analysis
 ## Overview
-In this project, US Medicare data (on patient claims and Provider fraudulency) was used to build and assess several predictive models for the purpose of classifying Providers as fraudulent. 
+In this project, US Medicare data was used to build and assess several predictive models for the purpose of classifying known Healthcare Providers as fraudulent. The best-performing predictive model was then used to analyse unknown Providers to flag as potentially fraudulent.
 
-The following statistical learning methods are considered: 
+The following statistical learning methods were considered: 
 * Logistic Regression with L2 Regularisation (Ridge Regression)
 * Logistic Regression with L1 Regularisation (Lasso)
 * K-Nearest Neighbours
@@ -12,9 +12,9 @@ The following statistical learning methods are considered:
 * Quadratic Discriminant Analysis (QDA)
 * Support Vector Machine (SVM)
 
-Where applicable, cross-validation has been applied to tune each of the models' hyper-parameters to ensure an optimal fit. The models are assessed based on their AUC score and any model predictions used are based on the probability threshold that maximises Youden's J statistic (i.e. max(TPR - FPR)). In other words, statistics such as the confusion matrix, accuracy, sensitivity, specificity, and F1-Score are calculated using this set of predictions.
+The models are assessed based on their Area under the ROC Curve (AUC) score and any model predictions used are based on the probability threshold that maximises Youden's J statistic (i.e. max(TPR - FPR)). In other words, statistics such as the confusion matrix, accuracy, sensitivity, specificity, and F1-Score are calculated using this set of predictions. Also, where applicable, cross-validation has been applied to tune each of the models' hyper-parameters to ensure an optimal fit.
 
-The Improved Random Forest model was assessed to be the best overall model in terms of AUC, and was used to produce the ultimate set of predictions for the unknown providers.
+The Improved Random Forest model was assessed to be the best-performing model in terms of AUC, and was used to produce the ultimate set of predictions for the unknown Providers.
 
 ## Input Data
 Input data was too large to upload, but can be viewed/downloaded here: https://drive.google.com/drive/folders/1Vovj_PTrj3HF5dXWZ1peZ-eW9vy1W3bG?usp=sharing
@@ -40,9 +40,9 @@ Input data was too large to upload, but can be viewed/downloaded here: https://d
 ### Random Forest:
 ![image](https://user-images.githubusercontent.com/62014067/127745982-2f1a6d95-7431-4157-a951-c0b7471ea371.png)
 
-![image](https://user-images.githubusercontent.com/62014067/127746049-0f4fa9ab-caa6-4f3f-b34b-05cc812b9263.png)
+A feature importance chart was generated for this Random Forest model and the highlighted features were used as the sole predictors in the Improved Random Forest model.
 
-The features highlighted were used as the sole predictors in the Improved Random Forest model.
+![image](https://user-images.githubusercontent.com/62014067/127746049-0f4fa9ab-caa6-4f3f-b34b-05cc812b9263.png)
 
 ### Improved Random Forest:
 ![image](https://user-images.githubusercontent.com/62014067/127746079-8d02f7a1-d4cf-440b-82c8-35954ce41a92.png)
@@ -57,7 +57,7 @@ The features highlighted were used as the sole predictors in the Improved Random
 ![image](https://user-images.githubusercontent.com/62014067/127746139-565c5984-2d8b-4a50-85b1-917bd9cb314f.png)
 
 ## Conclusion
-The Improved Random Forest performed the best out of all the statistical learning methods with an AUC of 0.9144, and was therefore selected to predict using the unknown dataset.
+The Improved Random Forest performed the best out of all the statistical learning methods with an AUC of 0.9144, and was therefore selected to predict fraudulency status using the unknown dataset.
 
 ## Output
 Provider_Fraud_Results.csv: Output table consisting of the 975 unknown US Medicare Providers with their predicted fraudulency status and associated fraudulency probabilities.
